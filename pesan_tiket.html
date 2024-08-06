@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Tiket - Museum Nusantara</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pesan Tiket Museum Nusantara</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="koleksi.html">Koleksi</a></li>
+                    <li><a href="pesan_tiket.html">Pesan Tiket</a></li>
+                    <li><a href="lihat_pemesanan.html">Lihat Pemesanan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h2>Formulir Pemesanan Tiket</h2>
+                <form id="booking-form">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="date">Tanggal Kunjungan:</label>
+                    <input type="date" id="date" name="date" required>
+                    <button type="submit">Kirim</button>
+                </form>
+                <div id="form-message"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Museum Nusantara</p>
+        </div>
+    </footer>
+</body>
+</html>

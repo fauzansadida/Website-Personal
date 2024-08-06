@@ -14,29 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const result = await response.json();
             messageDiv.textContent = result.message;
-            form.reset();
+
+            if (response.ok) {
+                // Redirect to the "Lihat Pemesanan" page after successful submission
+                window.location.href = 'lihat_pemesanan.html';
+            }
         });
-    }
-
-    // Fetch and display bookings
-    const bookingTable = document.getElementById('booking-table');
-
-    if (bookingTable) {
-        fetch('php/lihat_pemesanan.php')
-            .then(response => response.json())
-            .then(data => {
-                const tbody = bookingTable.querySelector('tbody');
-                tbody.innerHTML = '';
-
-                data.forEach(row => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${row.name}</td>
-                        <td>${row.email}</td>
-                        <td>${row.date}</td>
-                    `;
-                    tbody.appendChild(tr);
-                });
-            });
     }
 });
